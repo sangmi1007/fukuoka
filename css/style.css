@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* 기준 화면: 412 x 891 */
+.screen {
+  position: relative;
+  width: 412px;
+  height: 891px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* 제목 + 날짜 */
+.intro {
+  position: absolute;
+  top: 280px;               /* ← 이 숫자로 위아래 위치 조절 */
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 77px;
+  letter-spacing: -1px;
+}
+
+.date {
+  margin-top: 24px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* 시작 버튼 */
+.start-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
+  width: 156px;
+  height: 52px;
+  border: 1px solid #cfe3e0;
+  border-radius: 999px;
+  background: #c5fbf3;
+  color: #000000;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.start-btn:active {
+  transform: translateX(-50%) scale(0.96);
+}
+
+.start-btn:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
+
+/* 실제 폰에서는 화면 전체를 채우도록 */
+@media (max-width: 430px) {
+  .screen {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+  }
+}
