@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+/* =====================================================
+   page3.css  (일차별 일정 페이지)
+   기준 화면: 412 x 891 / 양옆 마진 36px
+   ===================================================== */
+
+:root {
+  --side: 36px;            /* 양옆 마진 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* 기준 화면 폭 412, 높이는 내용만큼 늘어남(스크롤) */
+.screen {
+  width: 412px;
+  min-height: 891px;
+  margin: 0 auto;
+  padding: 72px var(--side) 32px;
+  background: #ffffff;
+}
+
+/* =====================================================
+   일차 탭
+   ===================================================== */
+.tabs {
+  display: flex;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;
+  height: 45px;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+  border-radius: 0 8px 0 0;
+  background: #e5e5e5;
+  color: #555555;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab + .tab {
+  border-left: 0;
+}
+
+.tab.active {
+  background: #d6e6ff;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* 일차별 활성 탭 색 */
+.tab[data-day="1"].active { background: #d6e6ff; }
+.tab[data-day="2"].active { background: #ffe9d0; }
+.tab[data-day="3"].active { background: #e6ffd2; }
+.tab[data-day="4"].active { background: #ffe6fa; }
+.tab[data-day="5"].active { background: #ffffd2; }
+
+.tab:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: -3px;
+}
+
+/* =====================================================
+   일차 내용
+   ===================================================== */
+.day {
+  display: none;
+  padding-top: 34px;       /* 탭 ~ 첫 항목 */
+  padding-bottom: 27px;    /* 마지막 항목 ~ 아래 탭 */
+}
+
+.day.active {
+  display: block;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 118px 1fr;   /* 시간 열 / 제목 열 */
+  margin-bottom: 18px;
+}
+
+.time,
+.title {
+  align-self: baseline;               /* 시간과 제목 글줄 맞춤 */
+  line-height: 27px;
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  word-break: keep-all;               /* 단어 단위로 줄바꿈 */
+}
+
+/* 제목 아래 작은 설명 */
+.sub {
+  grid-column: 2;
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 17px;
+  word-break: keep-all;
+}
+
+/* 사진이 들어간 항목은 다음 항목까지 여백을 더 줌 */
+.item.has-media {
+  margin-bottom: 25px;
+}
+
+/* =====================================================
+   사진
+   ===================================================== */
+/* 제목 열에서 오른쪽 끝까지 (1일차 오므라이스) */
+.photo {
+  grid-column: 2;
+  display: block;
+  width: 100%;
+  height: 267px;
+  margin-top: 18px;
+  object-fit: cover;
+  background: #eeeeee;
+}
+
+/* 가로 전체를 쓰는 사진 한 장 (높이는 style="--h:..."로 지정) */
+.photo-full {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  height: var(--h, 227px);
+  margin-top: 12px;
+  object-fit: cover;
+  background: #eeeeee;
+}
+
+/* =====================================================
+   슬라이더
+   ===================================================== */
+.slider {
+  position: relative;
+  grid-column: 1 / -1;
+  margin-top: 12px;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: var(--h, 227px);
+  object-fit: cover;
+  scroll-snap-align: start;
+  background: #eeeeee;
+}
+
+/* 화살표 버튼: 글자는 숨기고 SVG 화살표를 정중앙에 */
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #d9f2b4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  font-size: 0;
+  color: transparent;
+  cursor: pointer;
+}
+
+.arrow.prev {
+  left: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15.5,5 8.5,12 15.5,19'/%3E%3C/svg%3E");
+}
+
+.arrow.next {
+  right: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='8.5,5 15.5,12 8.5,19'/%3E%3C/svg%3E");
+}
+
+/* 첫 사진의 왼쪽 / 마지막 사진의 오른쪽 버튼 숨김 (JS가 붙임) */
+.arrow.hidden {
+  display: none;
+}
+
+.arrow:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* 점 표시 */
+.dots {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d6e6ff;
+  transition: background 0.2s ease;
+}
+
+.dot.active {
+  background: #b5b5b5;
+}
+
+/* =====================================================
+   주소 안내 (1일차 숙소)
+   ===================================================== */
+.notes {
+  grid-column: 1 / -1;
+  margin-top: 11px;
+  padding-left: 24px;
+  font-size: 9.5px;
+  line-height: 15.5px;
+  list-style: disc;
+}
+
+.notes a {
+  color: inherit;
+  word-break: break-all;
+}
+
+/* =====================================================
+   아래 탭
+   ===================================================== */
+.tabs-bottom {
+  margin-top: 0;
+  margin-bottom: 30px;     /* 아래 탭 밑 여백 */
+}
+
+/* 5일차에는 아래 탭 없음 (JS로도 숨기지만 CSS로 한 번 더) */
+.screen[data-day="5"] .tabs-bottom {
+  display: none;
+}
+
+/* =====================================================
+   5일차: 시작 화면처럼 412 x 891 고정
+   ===================================================== */
+.screen[data-day="5"] {
+  position: relative;
+  height: 891px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.screen[data-day="5"] .day {
+  padding-bottom: 0;
+}
+
+/* 마무리 이미지: 화면 오른쪽 아래에 고정 */
+.end {
+  position: absolute;
+  right: 36px;          /* 더 오른쪽: 값을 줄이세요 */
+  bottom: 50px;         /* 더 아래: 값을 줄이세요 */
+  width: 172px;         /* 크기 조절 */
+}
+
+.end img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 이상입니다 말풍선 */
+.end-bubble {
+  position: absolute;
+  left: 48px;           /* 더 왼쪽: 값을 줄이세요 */
+  bottom: 106px;        /* 더 위: 값을 키우세요 */
+  width: 260px;         /* 크기 조절 (높이는 폭 x 0.665 비율) */
+  height: 173px;
+  display: none;        /* 터치 전에는 숨김 */
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.end-bubble svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fde3fc;
+  stroke: #d9cfdc;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.end-bubble span {
+  position: relative;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.end-bubble.show {
+  display: flex;
+  animation: rise 0.8s cubic-bezier(0.2, 0.9, 0.3, 1.1) forwards;
+}
+
+/* 아래에서 위로 올라오며 살짝 튕김 */
+@keyframes rise {
+  0% {
+    transform: translateY(280px) scale(0.6) rotate(6deg);
+    opacity: 0;
+  }
+  55% {
+    transform: translateY(-20px) scale(1.06) rotate(-3deg);
+    opacity: 1;
+  }
+  78% {
+    transform: translateY(6px) scale(0.98) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* 움직임 줄이기 설정을 쓰는 사용자는 애니메이션 없이 바로 표시 */
+@media (prefers-reduced-motion: reduce) {
+  .end-bubble.show {
+    animation: none;
+  }
+}
+
+/* =====================================================
+   실제 폰에서는 화면 폭을 꽉 채우도록 (양옆 36px 유지)
+   ===================================================== */
+@media (max-width: 430px) {
+  .screen {
+    width: 100%;
+  }
+
+  .screen[data-day="5"] {
+    height: 100vh;
+    height: 100dvh;
+  }
+}
