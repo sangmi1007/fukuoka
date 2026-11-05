@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>후쿠오카 여행 계획 - 일정</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/plan.css">
+</head>
+<body>
+  <main class="screen">
+
+    <section class="info">
+      <!-- 출국 -->
+      <div class="flight">
+        <p class="flight-label">12월 22일 김해공항</p>
+        <p class="flight-main">에어부산 14:00 - 15:00</p>
+      </div>
+
+      <!-- 양방향 화살표 -->
+      <svg class="arrow" viewBox="0 0 14 74" aria-hidden="true">
+        <line x1="7" y1="3" x2="7" y2="71"/>
+        <polyline points="1,9 7,3 13,9"/>
+        <polyline points="1,65 7,71 13,65"/>
+      </svg>
+
+      <!-- 귀국 -->
+      <div class="flight">
+        <p class="flight-label">12월 26일 하카타 공항</p>
+        <p class="flight-main">제주항공 08:55 - 10:00</p>
+      </div>
+
+      <!-- 일차별 요약 -->
+      <div class="summary">
+        <p>1일차 - 캐널시티, 하카타</p>
+        <p>2일차 - 오호리 공원, 모모치 해변, 나카스 강</p>
+        <p>3일차 - 근교 여행 (기타큐슈 고쿠라, 모지코)</p>
+        <p>4일차 - 텐진</p>
+      </div>
+    </section>
+
+    <!-- 확정은 아님 말풍선 -->
+    <div class="bubble" aria-hidden="true">
+      <svg viewBox="0 0 294 194">
+        <polygon points="147.5,0 181.5,29.5 237.5,17.5 238.5,54.5 294,66 258.5,97 294,126 237,137.5 238.5,174.5 182,162.5 147.5,194 112.5,162.5 56.5,175 58,137.5 0.5,126 36.5,96 0.5,66 57.5,54.5 56.5,17 112.5,29.5"/>
+      </svg>
+      <span>확정은 아님!!!!</span>
+    </div>
+
+    <button class="next-btn" type="button">다음</button>
+  </main>
+
+  <script src="js/plan.js"></script>
+</body>
+</html>
