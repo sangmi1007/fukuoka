@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>후쿠오카 여행 계획 - 일차별 일정</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page3.css">
+</head>
+<body>
+  <main class="screen">
+
+    <!-- 위쪽 탭 -->
+    <nav class="tabs" aria-label="일차 선택">
+      <button type="button" class="tab active" data-day="1">1일차</button>
+      <button type="button" class="tab" data-day="2">2일차</button>
+      <button type="button" class="tab" data-day="3">3일차</button>
+      <button type="button" class="tab" data-day="4">4일차</button>
+      <button type="button" class="tab" data-day="5">5일차</button>
+    </nav>
+
+    <!-- 1일차 -->
+    <section class="day active" id="day1">
+
+      <div class="item">
+        <p class="time">15:00</p>
+        <p class="title">하카타 공항 도착</p>
+      </div>
+
+      <div class="item">
+        <p class="time">15:00 - 16:30</p>
+        <p class="title">입국 수속</p>
+      </div>
+
+      <!-- 숙소 (슬라이더 + 주소) -->
+      <div class="item has-media">
+        <p class="time">16:30 - 17:00</p>
+        <p class="title">숙소 boxi hakata1<br>체크인 / 짐보관</p>
+
+        <div class="slider">
+          <div class="slides">
+            <img src="images/boxi1.png" alt="boxi hakata1 외관">
+            <img src="images/boxi2.png" alt="boxi hakata1 내부">
+          </div>
+          <button type="button" class="arrow prev" aria-label="이전 사진">&#8249;</button>
+          <button type="button" class="arrow next" aria-label="다음 사진">&#8250;</button>
+        </div>
+        <div class="dots"></div>
+
+        <ul class="notes">
+          <li>한글 주소: 일본 후쿠오카현 후쿠오카시 하카타구 미노시마 1-13-11-1</li>
+          <li>원문 주소: 〒812-0017 福岡県福岡市博多区美野島１丁目１３−１１−１</li>
+          <li>구글 맵 : <a href="https://maps.app.goo.gl/ZP2r8FVQWeq7o5YT8" target="_blank" rel="noopener">https://maps.app.goo.gl/ZP2r8FVQWeq7o5YT8</a></li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <p class="time">17:00 - 17:30</p>
+        <p class="title">하카타역 이동</p>
+      </div>
+
+      <!-- 식사 (사진 한 장) -->
+      <div class="item has-media">
+        <p class="time">17:30 - 18:30</p>
+        <p class="title">규마루 하루요시점<br>함바그 식사</p>
+        <img class="photo" src="images/gyumaru.png" alt="함바그 오므라이스">
+      </div>
+
+      <!-- 캐널시티 (슬라이더) -->
+      <div class="item has-media">
+        <p class="time">18:30 - 20:00</p>
+        <p class="title">캐널시티 분수쇼 / 쇼핑</p>
+
+        <div class="slider">
+          <div class="slides">
+            <img src="images/city1.png" alt="캐널시티 분수쇼">
+            <img src="images/city2.png" alt="캐널시티 내부">
+          </div>
+          <button type="button" class="arrow prev" aria-label="이전 사진">&#8249;</button>
+          <button type="button" class="arrow next" aria-label="다음 사진">&#8250;</button>
+        </div>
+        <div class="dots"></div>
+      </div>
+
+      <!-- 크리스마스 마켓 (슬라이더) -->
+      <div class="item has-media">
+        <p class="time">20:00 - 20:40</p>
+        <p class="title">JR 하카타역 광장<br>크리스마스 마켓 구경</p>
+
+        <div class="slider">
+          <div class="slides">
+            <img src="images/hakata1.png" alt="JR 하카타역 크리스마스 트리">
+            <img src="images/hakata2.png" alt="크리스마스 마켓">
+          </div>
+          <button type="button" class="arrow prev" aria-label="이전 사진">&#8249;</button>
+          <button type="button" class="arrow next" aria-label="다음 사진">&#8250;</button>
+        </div>
+        <div class="dots"></div>
+      </div>
+
+      <div class="item">
+        <p class="time">20:40 - 21:00</p>
+        <p class="title">숙소로 이동</p>
+      </div>
+
+      <div class="item">
+        <p class="time">21:00 - 23:30</p>
+        <p class="title">씻기 / 숙소 앞 편의점 털기</p>
+      </div>
+
+      <div class="item">
+        <p class="time">23:30 ~</p>
+        <p class="title">취침</p>
+      </div>
+    </section>
+
+    <!-- 2~5일차는 같은 형태로 추가하세요 -->
+    <section class="day" id="day2">
+
+  <!-- 신선산도 (사진 한 장, 가로 전체) -->
+  <div class="item has-media">
+    <p class="time">6:30 - 7:00</p>
+    <p class="title">하카타역 신선산도<br>오픈런 이동</p>
+    <img class="photo-full" style="--h:255px" src="images/sando.png" alt="하카타역 신선산도">
+  </div>
+
+  <div class="item">
+    <p class="time">7:00 - 8:00</p>
+    <p class="title">~오픈 기다리는 시간~</p>
+  </div>
+
+  <div class="item">
+    <p class="time">8:00 - 8:30</p>
+    <p class="title">과일 산도 구매 후<br>다시 숙소로</p>
+  </div>
+
+  <div class="item">
+    <p class="time">8:30 - 10:30</p>
+    <p class="title">다시 취침</p>
+  </div>
+
+  <div class="item">
+    <p class="time">10:30</p>
+    <p class="title">기상</p>
+  </div>
+
+  <div class="item">
+    <p class="time">10:30 - 12:00</p>
+    <p class="title">씻기 / 나갈준비</p>
+  </div>
+
+  <!-- 로피아 (슬라이더) -->
+  <div class="item has-media">
+    <p class="time">12:00 - 12:40</p>
+    <p class="title">로피아 나가하마점<br>(대형 해산물 마트) 이동</p>
+    <div class="slider" style="--h:227px">
+      <div class="slides">
+        <img src="images/lopia.png" alt="로피아 나가하마점 외관">
+        <img src="images/lopia2.png" alt="로피아 내부">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <div class="item">
+    <p class="time">12:40 - 13:00</p>
+    <p class="title">마트 구경 / 스시 구매</p>
+  </div>
+
+  <!-- Jacques (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">13:00 - 13:30</p>
+    <p class="title">Jacques(디저트 부띠끄)<br>케이크 구매</p>
+    <img class="photo-full" style="--h:227px" src="images/jacques.png" alt="Jacques 케이크">
+  </div>
+
+  <!-- 오호리 공원 (설명 + 슬라이더 3장) -->
+  <div class="item has-media">
+    <p class="time">13:30 - 16:00</p>
+    <p class="title">오호리 공원</p>
+    <p class="sub">공원 벤치에 앉아서 스시, 케이크 먹기<br>/ 가만히 앉아서 멍때리고 오리배 구경하기<br>/ 산책로 걷기<br>/ 오호리 공원역 지하철 사진관 ‘키레이’ 찍기</p>
+    <div class="slider" style="--h:191px">
+      <div class="slides">
+        <img src="images/ohori1.png" alt="오호리 공원 전경">
+        <img src="images/ohori2.png" alt="오호리 공원 산책로">
+        <img src="images/kirei.png" alt="오호리 공원역 사진관">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <div class="item">
+    <p class="time">16:00 - 16:30</p>
+    <p class="title">모모치 해변 이동</p>
+  </div>
+
+  <!-- 모모치 해변 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">16:30 - 17:30</p>
+    <p class="title">모모치 해변</p>
+    <img class="photo-full" style="--h:224px" src="images/momochi.png" alt="모모치 해변">
+  </div>
+
+  <div class="item">
+    <p class="time">17:30 - 18:10</p>
+    <p class="title">나카스로 이동</p>
+  </div>
+
+  <!-- 모츠나베 (슬라이더) -->
+  <div class="item has-media">
+    <p class="time">18:10 - 19:30</p>
+    <p class="title">시오 모츠나베 센도<br>레몬을 곁들인 소금<br>모츠나베 식사</p>
+    <div class="slider" style="--h:191px">
+      <div class="slides">
+        <img src="images/nabe.png" alt="소금 모츠나베">
+        <img src="images/nabe2.png" alt="모츠나베 가게">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- 일루미네이션 (슬라이더) -->
+  <div class="item has-media">
+    <p class="time">19:30 - 20:30</p>
+    <p class="title">나카스 히카리 노 어드벤트<br>일루미네이션 구경</p>
+    <div class="slider" style="--h:224px">
+      <div class="slides">
+        <img src="images/nakasu1.png" alt="나카스 일루미네이션 트리">
+        <img src="images/nakasu2.png" alt="나카스 일루미네이션 거리">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <div class="item">
+    <p class="time">20:30 - 21:00</p>
+    <p class="title">나카스 강변 벤치에서<br>편의점 오뎅, 캠맥 먹기</p>
+  </div>
+
+  <div class="item">
+    <p class="time">21:00 - 21:30</p>
+    <p class="title">숙소 이동</p>
+  </div>
+
+  <div class="item">
+    <p class="time">21:30 - 23:00</p>
+    <p class="title">씻기 / 누워 쉬기</p>
+  </div>
+
+  <div class="item">
+    <p class="time">23:00 ~</p>
+    <p class="title">취침</p>
+  </div>
+</section>
+
+<section class="day" id="day3">
+
+  <div class="item">
+    <p class="time">7:30</p>
+    <p class="title">기상</p>
+  </div>
+
+  <div class="item">
+    <p class="time">7:30 - 9:00</p>
+    <p class="title">씻기 / 나갈 준비</p>
+  </div>
+
+  <div class="item">
+    <p class="time">9:00 - 9:30</p>
+    <p class="title">하카타역 이동</p>
+  </div>
+
+  <!-- 죠스이안 모찌 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">9:30 - 10:00</p>
+    <p class="title">죠스이안 모찌 구매</p>
+    <img class="photo-full" style="--h:196px" src="images/mochi.png" alt="죠스이안 모찌">
+  </div>
+
+  <div class="item">
+    <p class="time">10:00 - 10:20</p>
+    <p class="title">텐진 파르코 백화점 이동</p>
+  </div>
+
+  <!-- 키와미야 함바그 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">10:20 - 12:00</p>
+    <p class="title">키와미야 함바그 식사</p>
+    <img class="photo-full" style="--h:191px" src="images/kiwamiya.png" alt="키와미야 함바그">
+  </div>
+
+  <div class="item">
+    <p class="time">12:00 - 12:30</p>
+    <p class="title">후쿠오카 시립미술관 이동</p>
+  </div>
+
+  <!-- 전시 관람 (슬라이더 2장) -->
+  <div class="item has-media">
+    <p class="time">12:30 - 14:00</p>
+    <p class="title">전시 관람</p>
+    <div class="slider" style="--h:207px">
+      <div class="slides">
+        <img src="images/art1.png" alt="후쿠오카 시립미술관 외관">
+        <img src="images/art2.png" alt="후쿠오카 시립미술관 전시">
+        <img src="images/art3.png" alt="3">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <div class="item">
+    <p class="time">14:00 - 14:30</p>
+    <p class="title">오호리 공원 / 모찌먹기</p>
+  </div>
+
+  <div class="item">
+    <p class="time">14:30 - 15:00</p>
+    <p class="title">텐진 이동</p>
+  </div>
+
+  <!-- 라신반 / GIGO (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">15:00 - 16:00</p>
+    <p class="title">라신반 / GIGO 구경</p>
+    <img class="photo-full" style="--h:214px" src="images/rasinban.png" alt="라신반 / GIGO">
+  </div>
+
+  <!-- 미나텐진 (설명 + 슬라이더 2장) -->
+  <div class="item has-media">
+    <p class="time">16:00 - 17:00</p>
+    <p class="title">미나텐진 구경</p>
+    <p class="sub">유니클로 / GU / 무인양품</p>
+    <div class="slider" style="--h:188px">
+      <div class="slides">
+        <img src="images/mina1.png" alt="미나텐진 외관">
+        <img src="images/mina2.png" alt="미나텐진 내부">
+        <img src="images/mina3.png" alt="">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- 야끼소룡포 텐텐 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">17:00 - 17:30</p>
+    <p class="title">야끼소룡포 텐텐</p>
+    <img class="photo-full" style="--h:201px" src="images/tenten.png" alt="야끼소룡포 텐텐">
+  </div>
+
+  <!-- 다이묘 가든시티 파크 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">17:30 - 18:00</p>
+    <p class="title">다이묘 가든시티 파크<br>소룡포 먹기</p>
+    <img class="photo-full" style="--h:187px" src="images/garden.png" alt="다이묘 가든시티 파크">
+  </div>
+
+  <!-- 와타나베도리 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">18:00 - 18:30</p>
+    <p class="title">와타나베도리<br>일루미네이션 산책</p>
+    <img class="photo-full" style="--h:226px" src="images/watanabe.png" alt="와타나베도리 일루미네이션">
+  </div>
+
+  <!-- 돈키호테 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">18:30 - 19:00</p>
+    <p class="title">돈키호테 텐진본점</p>
+    <img class="photo-full" style="--h:216px" src="images/donki.png" alt="돈키호테 텐진본점">
+  </div>
+
+  <!-- 츠키시마 몬자야끼 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">19:00 - 20:00</p>
+    <p class="title">츠키시마 몬자야끼 식사</p>
+    <img class="photo-full" style="--h:216px" src="images/monza.png" alt="츠키시마 몬자야끼">
+  </div>
+
+  <div class="item">
+    <p class="time">20:00 - 20:30</p>
+    <p class="title">숙소로 이동</p>
+  </div>
+
+  <div class="item">
+    <p class="time">20:30 - 23:00</p>
+    <p class="title">씻기 / 누워쉬기</p>
+  </div>
+
+  <div class="item">
+    <p class="time">23:00 ~</p>
+    <p class="title">취침</p>
+  </div>
+</section>
+
+    <section class="day" id="day4">
+
+  <div class="item">
+    <p class="time">10:00</p>
+    <p class="title">기상</p>
+  </div>
+
+  <div class="item">
+    <p class="time">10:00 - 11:30</p>
+    <p class="title">씻기 / 나갈 준비</p>
+  </div>
+
+  <div class="item">
+    <p class="time">11:30 - 12:00</p>
+    <p class="title">텐진 파르코 백화점 이동</p>
+  </div>
+
+  <!-- 키와미야 함바그 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">12:00 - 13:30</p>
+    <p class="title">이치란 라멘 본점</p>
+    <img class="photo-full" style="--h:191px" src="images/ichiran.png" alt="이치란 라멘">
+  </div>
+
+  <!-- 준쿠도 서점 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">13:30 - 14:00</p>
+    <p class="title">준쿠도 서점 구경</p>
+    <img class="photo-full" style="--h:191px" src="images/book.png" alt="준쿠도 서점">
+  </div>
+
+  <!-- 텐진 지하상가 (설명 + 슬라이더) -->
+  <div class="item has-media">
+    <p class="time">14:00 - 15:00</p>
+    <p class="title">텐진 지하상가 구경</p>
+    <p class="sub">이모야 킨지로 / 링고 애플파이 / 칼디</p>
+    <div class="slider" style="--h:191px">
+      <div class="slides">
+        <img src="images/tenjin.png" alt="텐진 지하상가">
+        <img src="images/imoya.png" alt="이모야 킨지로">
+        <img src="images/pie.png" alt="링고 애플파이">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- JAB 카페 (슬라이더) -->
+  <div class="item has-media">
+    <p class="time">15:00 - 16:30</p>
+    <p class="title">J A B 카페</p>
+    <div class="slider" style="--h:203px">
+      <div class="slides">
+        <img src="images/jab.png" alt="JAB 카페 외관">
+        <img src="images/jab2.png" alt="JAB 카페 내부">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- LP샵 (설명 + 슬라이더 4장) -->
+<div class="item has-media">
+  <p class="time">16:30 - 18:00</p>
+  <p class="title">LP샵 구경</p>
+  <p class="sub">Face records / Borderline record<br>/ Catfish records / Groovin’</p>
+  <div class="slider" style="--h:226px">
+    <div class="slides">
+      <img src="images/lp1.png" alt="Face records">
+      <img src="images/lp2.png" alt="Borderline record">
+      <img src="images/lp3.png" alt="Catfish records">
+      <img src="images/lp4.png" alt="Groovin’">
+    </div>
+    <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+    <button type="button" class="arrow next" aria-label="다음 사진"></button>
+  </div>
+  <div class="dots"></div>
+</div>
+
+  <!-- 이토시마 쇼쿠도 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">18:00 - 19:30</p>
+    <p class="title">이토시마 쇼쿠도<br>카이센동</p>
+    <img class="photo-full" style="--h:227px" src="images/itoshima.png" alt="카이센동">
+  </div>
+
+  <!-- 텐진시청 크리스마스 마켓 (슬라이더) -->
+  <div class="item has-media">
+    <p class="time">19:30 - 20:00</p>
+    <p class="title">텐진시청 크리스마스 마켓</p>
+    <div class="slider" style="--h:215px">
+      <div class="slides">
+        <img src="images/chistmas.png" alt="텐진 크리스마스 마켓">
+        <img src="images/light.png" alt="텐진 크리스마스 마켓 야경">
+      </div>
+      <button type="button" class="arrow prev" aria-label="이전 사진"></button>
+      <button type="button" class="arrow next" aria-label="다음 사진"></button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- 재즈앤카페 백스테이지 (사진 한 장) -->
+  <div class="item has-media">
+    <p class="time">20:00 - 22:00</p>
+    <p class="title">재즈앤카페 백스테이지<br>재즈공연 관람</p>
+    <img class="photo-full" style="--h:191px" src="images/jazz.png" alt="재즈앤카페 백스테이지">
+  </div>
+
+  <div class="item">
+    <p class="time">22:00 - 22:30</p>
+    <p class="title">숙소로 이동</p>
+  </div>
+
+  <div class="item">
+    <p class="time">22:30 - 00:00</p>
+    <p class="title">씻기 / 짐싸기<br>편의점 털어서 먹기</p>
+  </div>
+
+  <div class="item">
+    <p class="time">00:00 ~</p>
+    <p class="title">취침</p>
+  </div>
+</section>
+
+    <section class="day" id="day5">
+
+  <div class="item">
+    <p class="time">5:20</p>
+    <p class="title">기상</p>
+  </div>
+
+  <div class="item">
+    <p class="time">5:20 - 5:40</p>
+    <p class="title">양치 세수<br>짐 확인 후 체크아웃</p>
+  </div>
+
+  <div class="item">
+    <p class="time">5:40 - 6:10</p>
+    <p class="title">하카타 공항 도착<br>비행기 체크인</p>
+  </div>
+
+  <div class="item">
+    <p class="time">8:55 - 10:00</p>
+    <p class="title">하카타 공항에서 출발</p>
+  </div>
+
+  <div class="item">
+    <p class="time">10:00</p>
+    <p class="title">부산 도착</p>
+  </div>
+
+  <!-- 마무리 이미지: 사람만 남기고 여백을 자른 PNG 사용 -->
+  <div class="end">
+    <img src="images/please.png" alt="ㅈㅂ">
+  </div>
+</section>
+
+<!-- 5일차: 이상입니다 말풍선 -->
+<div class="end-bubble" aria-hidden="true">
+  <svg viewBox="0 0 294 194">
+    <polygon points="147.5,0 181.5,29.5 237.5,17.5 238.5,54.5 294,66 258.5,97 294,126 237,137.5 238.5,174.5 182,162.5 147.5,194 112.5,162.5 56.5,175 58,137.5 0.5,126 36.5,96 0.5,66 57.5,54.5 56.5,17 112.5,29.5"/>
+  </svg>
+  <span>이상입니다</span>
+</div>
+
+    <!-- 아래쪽 탭 (위쪽과 동일하게 동작) -->
+    <nav class="tabs tabs-bottom" aria-label="일차 선택">
+      <button type="button" class="tab active" data-day="1">1일차</button>
+      <button type="button" class="tab" data-day="2">2일차</button>
+      <button type="button" class="tab" data-day="3">3일차</button>
+      <button type="button" class="tab" data-day="4">4일차</button>
+      <button type="button" class="tab" data-day="5">5일차</button>
+    </nav>
+  </main>
+
+  <script src="js/page3.js"></script>
+</body>
+</html>
